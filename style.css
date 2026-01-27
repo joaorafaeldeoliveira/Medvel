@@ -1,0 +1,1719 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --color-bg: #ffffff;
+    --color-text: hsl(240, 6%, 10%);
+    --color-primary: #9CAD88;
+    --transition: 0.25s ease;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+  }
+  #Clinica,
+#Servicos,
+#Convenios,
+#Contato {
+  scroll-margin-top: 120px;
+}
+  body { 
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Inter';
+}
+main { 
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Inter';
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  52px 60px;
+    gap: 50px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-primary);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: width var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 200px;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.horarios { 
+    display: flex;
+    flex-direction: column;
+    background-color: #DDDBDB;
+    opacity: 80%;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.manha { 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.tarde { 
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+}
+.telefone-fixo { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px
+}
+.telefones { 
+    display: flex;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.banner-principal { 
+    max-width: 1920px;
+    max-height: 1080;
+    margin: 0px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.banner-text-area { 
+    flex: 1;
+    max-width: 560px;
+}
+.banner-text-area h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.banner-text-area h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    font-weight: bold;
+    opacity: 0.7;
+
+}
+
+.banner-image-area { 
+    flex: 1;
+    max-width: 1920px;
+}
+
+.banner-image-area img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    object-fit: cover;
+}
+.contact { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.button-agendar { 
+    display: flex;
+    font-weight: bold;
+    padding: 12px 12px;
+    background-color: #8BA869;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:10px;
+}
+.button-agendar:hover { 
+    background-color: #637a4f;
+}
+
+.button-agendar a { 
+    text-decoration: none;
+    color: white;
+    
+}
+.exams { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.exams a { 
+    color: #8BA869;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+.exams svg { 
+    color:#8BA869 ;
+}
+.exams a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 3px;
+    background-color: #8BA869;
+    transition: width 0.3s ease;
+}
+
+.exams a:hover::after {
+    width: 100%;
+}
+
+.section-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
+}
+.section-divider svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.convenios {
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    border-radius: 40px 40px 0 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-top:-720px;
+}
+.convenios h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 46px;
+}
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    left: 48%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #8BA869;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #8BA869;
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+.carousel-btn.prev {
+    left: 30px;
+}
+
+.carousel-btn.next {
+    right: 30px;
+}
+.carousel-track {
+    display: flex;
+    gap: 20px; 
+    width: 90%;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+    flex: 0 0 calc(33.33%); 
+    min-width: 250px; 
+    background: #ffffff;
+    border-radius: 20px;
+    height: 180px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.carousel-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05)
+}
+.carousel-dots {
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #fff;
+}
+
+.sobre-nos { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 300px 64px;
+    width: 100%;
+    min-height: 500px; 
+
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+.sobre-nos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 63%; 
+    background-color: #9CAD88;
+    z-index: -1;
+}
+.sobre-nos > * {
+    position: relative;
+    z-index: 1;
+}
+.sobre-nos-image-area { 
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.sobre-nos-image-area::after {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    border-radius: 30px;
+    background-color: #9CAD88;
+    z-index: -1;
+    opacity: 0.15;
+}
+.sobre-nos-image-area img { 
+    width: 100%;
+    max-width: 550px; 
+    height: auto; 
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+.sobre-nos-text-area { 
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    color: white;
+    height: 500px;
+}
+
+.sobre-nos-text-area h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.sobre-nos-text-area p {
+    margin-top: -10px;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 560px;
+}
+.sobre-nos-tags { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    margin-top: 60px;
+    width: 100%;
+    gap: 20px;
+}
+.sobre-nos-item { 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 20px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.sobre-nos-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.sobre-nos-item svg {
+    margin-bottom: 12px;
+    width: 26px;
+    height: 26px;
+    color: #9CAD88;
+    flex-shrink: 0;
+}
+
+.sobre-nos-item p { 
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+
+.corpo-clinico {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 140px 64px;
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f5f7f3 100%
+    );
+}
+.corpo-clinico-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    background: #fff;
+    padding: 80px;
+    border-radius: 32px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+}
+.corpo-clinico::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-color: #9CAD88;
+    z-index: -1;
+}
+.medicos-text-area {
+    background: #f8faf6;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.medicos-text-area h2 {
+    font-size: 56px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #8BA869;
+    position: relative;
+}
+
+.medicos-text-area h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: #9CAD88;
+    display: block;
+    margin-top: 12px;
+    border-radius: 2px;
+}
+
+.medicos-text-area p {
+    margin-top: -30px;
+    max-width: 520px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #333;
+}
+
+.medicos-button {
+    width: fit-content;
+    margin-top: 10px;
+    background-color: #8BA869;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+
+    padding: 22px 32px;
+    font-size: 16px;
+    border-radius: 999px;
+    background: linear-gradient(
+        135deg,
+        #8BA869,
+        #9CAD88
+    );
+}
+.medicos-button svg {
+    transition: transform 0.3s ease;
+}
+
+.medicos-button:hover svg {
+    transform: translateX(6px);
+}
+.medicos-button:hover {
+    background-color: #7a965d;
+    transform: translateY(-2px);
+}
+
+.medicos-image-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.medicos-image-area img {
+    max-width: 460px;
+    border-radius: 28px;
+    box-shadow: 
+        0 30px 60px rgba(0,0,0,0.15),
+        0 0 0 10px rgba(139,168,105,0.1);
+}
+.exames  {
+    background-color: #9CAD88;
+}
+.exames-text { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.exames-text h2 { 
+    font-size: 32px;
+}
+.exames-text p { 
+    display: flex;
+    font-size: 18px;
+    max-width: 550px;
+    opacity: 0.9;
+}
+
+
+.exames-cards { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 20px;
+    padding: 64px;
+}
+
+.exames-item { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 20px;
+    gap: 10px;
+    
+}
+.exames-item h3 { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+}
+.exames-item p { 
+    font-size: 12px;
+    line-height: 18px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.exames-image { 
+    border-radius: 100%;
+    max-width: 100px;
+    max-height: 100px;
+}
+.exames-image img { 
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.sintomas { 
+    padding: 0px 64px;
+}
+.sintomas-title { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.sintomas-title h2{ 
+    color: #9CAD88;
+    font-size: 46px;
+}
+.sintomas-title p { 
+    font-size: 18px;
+    opacity: 0.9;
+    margin-top: -20px;
+}
+
+.sintomas-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+    padding: 64px;
+}
+
+.sintomas-item { 
+    background-color: #9CAD88;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    padding: 12px 12px;
+    border-radius: 10px;
+}
+
+
+.sintoma-image { 
+    border-radius: 100%;
+    max-width: 100px;
+    max-height: 100px;
+    background-color: white;
+}
+.sintoma-image img { 
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.map-section {
+    background-color: #bcc9a8;
+    padding: 80px 0;
+  }
+  
+  .map-container {
+    position: relative;
+    max-width: 1200px;
+    height: 420px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  .map-card {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+  
+  .map-card h3 {
+    color: #7a8f5a;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .map-info {
+    margin-bottom: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .map-info h3 {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .map-info p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .telefone-map { 
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap:10px
+}
+.manha-map { 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.tarde-map { 
+    display: flex;
+    margin-top: -10px;
+}
+.loc-map { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.footer {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+  
+.footer-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0 auto; 
+    height: 3px;
+    background-color: #b9c6a4;
+    width: 100%;
+    max-width: 1280px; 
+}
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px 80px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    align-items: start;
+    height: 100%;
+    max-height: 1080px;
+    flex: 1;
+}
+  
+  .footer-brand img {
+    max-width: 140px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-brand p {
+    font-size: 12px;
+    color: #7a8f5a;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .footer-links a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #7a8f5a;
+    transition: opacity 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    opacity: 0.7;
+  }
+  
+  .footer-social p,
+.footer-contact p {
+  font-size: 14px;
+  color: #7a8f5a;
+  line-height: 1.5;
+}
+  
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    color: white;
+  }
+  
+  .social-icons a {
+    color: white;
+    width: 36px;
+    height: 36px;
+    background-color: #2c2c2c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .social-icons svg {
+    width: 16px;
+    height: 16px;
+    text-decoration: none;
+  }
+  
+  .footer-contact p {
+    font-size: 14px;
+    color: #7a8f5a;
+    margin-bottom: 14px;
+  }
+  
+  .footer-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #9cad88;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .footer-button:hover {
+    background-color: #8a9b73;
+  }
+  
+  .footer-bottom {
+    background-color: #b9c6a4;
+    padding: 16px 0;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+.footer-bottom p {
+    font-size: 12px;
+    color: #fff;
+}
+
+@media (max-width: 1280px) {
+
+
+    .banner-principal {
+        margin: 0 40px;
+        gap: 40px;
+    }
+
+    .convenios {
+        margin-top: -500px;
+    }
+
+    .sobre-nos {
+        padding: 200px 40px;
+        gap: 40px;
+    }
+
+    .corpo-clinico {
+        padding: 80px 40px;
+        gap: 50px;
+    }
+
+    .medicos-text-area h2 {
+        font-size: 40px;
+    }
+
+    .sintomas {
+        padding: 60px 40px;
+    }
+
+    .sintomas-grid {
+        padding: 40px;
+    }
+
+    .footer-content {
+        padding: 80px 30px 60px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-links a { 
+        font-size: 12px;
+        text-align: center;
+    }
+    .horarios {
+        padding: 3px 12px;
+        font-size: 10px;
+    }
+    .tarde { 
+        margin-top: -5px;
+    }
+    .manha svg { 
+        width: 14px;
+        height: 14px;
+    }
+    .telefone-fixo svg { 
+        width: 14px;
+        height: 14px;
+    }
+    .convenios { 
+        background-color: #9CAD88;
+    }
+    .telefones {
+        gap: 15px;
+    }
+
+    .banner-principal {
+        flex-direction: column;
+        margin: 0 30px;
+        gap: 40px;
+    }
+
+    .banner-text-area {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .banner-text-area h1 {
+        font-size: 32px;
+    }
+
+    .banner-text-area h3 {
+        font-size: 20px;
+    }
+
+    .contact {
+        justify-content: center;
+    }
+
+    .banner-image-area {
+        max-width: 100%;
+    }
+
+    .convenios {
+        margin-top: -300px;
+    }
+
+    .convenios h2 {
+        font-size: 36px;
+    }
+
+    .carousel-item {
+        flex: 0 0 calc(50%);
+        min-width: 200px;
+        height: 150px;
+    }
+
+    .sobre-nos {
+        flex-direction: column;
+        padding: 150px 30px;
+        gap: 40px;
+    }
+
+    .sobre-nos::before {
+        height: 88%;
+    }
+
+    .sobre-nos-tags {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .sobre-nos-text-area {
+        height: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sobre-nos-text-area p {
+        text-align: center;
+    }
+
+    .corpo-clinico {
+        flex-direction: column-reverse;
+        padding: 100px 32px;
+        gap: 40px;
+    }
+    .corpo-clinico-container {
+        flex-direction: column-reverse;
+        gap: 48px;
+        padding: 56px;
+        text-align: center;
+    }
+    .medicos-text-area h2::after {
+        margin: 12px auto 0;
+    }
+    .corpo-clinico::after {
+        height: 20%;
+    }
+
+    .medicos-text-area {
+        align-items: center;
+        text-align: center;
+        padding: 32px;
+    }
+
+    .medicos-text-area h2 {
+        font-size: 42px;
+    }
+
+    .medicos-text-area p {
+        margin-top: 16px;
+        font-size: 17px;
+        max-width: 100%;;
+    }
+    .medicos-button {
+        margin: 24px auto 0;
+    }
+
+    .medicos-image-area img {
+        max-width: 420px;
+    }
+
+    .exames-cards {
+        padding: 40px 30px;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .sintomas-title h2 {
+        font-size: 36px;
+    }
+
+    .sintomas-grid {
+        padding: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .map-container {
+        height: 500px;
+    }
+
+    .map-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: calc(100% - 40px);
+        margin: 20px;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 60px 30px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    nav {
+        justify-content: space-between;
+        margin: 20px;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .horarios {
+        display: none;
+    }
+
+    .nav-links {
+        position: fixed;
+        inset: 0;
+        background: white;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+    
+      .nav-links.active {
+        transform: translateX(0);
+      }
+  
+    .nav-links a {
+      font-size: 20px;
+    }
+
+
+    .logo {
+        z-index: 1001;
+    }
+
+    .mobile-menu-toggle {
+        z-index: 1001;
+    }
+
+    .manha svg { 
+        width: 14px;
+        height: 14px;
+    }
+    .telefone-fixo svg { 
+        width: 14px;
+        height: 14px;
+    }
+    .horarios {
+        padding: 5px 12px;
+        font-size: 11px;
+    }
+
+    .telefones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner-principal {
+        margin: 0 20px;
+        gap: 30px;
+    }
+
+    .banner-text-area h1 {
+        font-size: 28px;
+    }
+
+    .banner-text-area h3 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button-agendar {
+        width: 70%;
+        justify-content: center;
+    }
+    .section-divider { 
+        margin-bottom: 10px;
+    }
+    .convenios {
+        background-color: #9CAD88;
+        padding: 30px 15px;
+        margin-top: -50px;
+    }
+    .convenios::after { 
+        background-color: #9CAD88;
+    }
+
+    .convenios h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .carousel { 
+        width: 100%;
+        left: 53%;
+        height: auto;
+    }
+    .carousel-item {
+        flex: 0 0 100%;
+        min-width: 180px;
+        height: 200px;
+        padding: 15px;
+    }
+    .carousel-btn {
+        display: none;
+    }
+    .sobre-nos {
+        padding: 100px 20px;
+        gap: 30px;
+    }
+    .sobre-nos::before {
+        height: 100%;
+    }
+    .sobre-nos-image-area img {
+        max-width: 100%;
+    }
+
+    .sobre-nos-text-area h2 {
+        font-size: 1.8rem;
+    }
+
+    .sobre-nos-text-area p {
+        font-size: 1rem;
+    }
+
+    .sobre-nos-tags {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+        gap: 20px;
+    }
+
+    .sobre-nos-item {
+        padding: 15px 8px;
+    }
+
+    .sobre-nos-item p {
+        font-size: 12px;
+    }
+
+    .corpo-clinico::after {
+        height: 1%;
+    }
+
+    .corpo-clinico {
+        padding: 80px 20px;
+        gap: 30px;
+    }
+
+    .corpo-clinico-container {
+        padding: 40px 24px;
+        border-radius: 24px;
+    }
+    .medicos-text-area {
+        padding: 24px;
+    }
+
+    .medicos-text-area h2 {
+        font-size: 34px;
+    }
+    .medicos-text-area h2::after {
+        margin: 12px auto 0;
+    }
+    .medicos-text-area p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .medicos-button {
+        padding: 18px 26px;
+        font-size: 15px;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .medicos-image-area img {
+        max-width: 100%;
+        border-radius: 22px;
+    }
+
+    .exames-text h2 {
+        font-size: 26px;
+    }
+
+    .exames-text p {
+        font-size: 16px;
+    }
+
+
+    .exames-cards {
+        padding: 20px;
+        gap: 20px;
+        grid-template-columns:1fr;
+    }
+
+
+    .exames-item {
+        padding: 15px;
+    }
+
+    .sintomas {
+        padding: 40px 20px;
+    }
+
+    .sintomas-title h2 {
+        font-size: 28px;
+    }
+
+    .sintomas-title p {
+        font-size: 16px;
+        margin-top: -10px;
+    }
+
+    .sintomas-grid {
+        padding: 20px;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .map-section {
+        padding: 40px 15px;
+    }
+
+    .map-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .loc-map{ 
+        width: 65%;
+    }
+    .map-card {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        border-radius: 20px 20px 0 0;
+        order: -1;
+    }
+
+    .map-iframe {
+        height: 300px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .footer {
+        min-height: auto;
+    }
+
+    .footer-top {
+        margin: 30px 20px 0;
+        width: calc(100% - 40px);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        padding: 12px 0;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        max-width: 70px;
+    }
+
+    .horarios {
+        padding: 4px 10px;
+        font-size: 10px;
+        border-radius: 15px;
+    }
+
+    .manha,
+    .tarde {
+        font-size: 10px;
+    }
+
+    .banner-principal {
+        margin: 0 15px;
+        gap: 25px;
+    }
+
+    .banner-text-area h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .banner-text-area h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .button-agendar {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .exams a {
+        font-size: 14px;
+    }
+
+    .convenios {
+        margin-top: -150px;
+        padding: 25px 10px;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .convenios h2 {
+        font-size: 24px;
+    }
+
+    .carousel-item {
+        height: 110px;
+        padding: 12px;
+        border-radius: 15px;
+    }
+
+    .sobre-nos {
+        padding: 80px 15px;
+    }
+
+    .sobre-nos-text-area h2 {
+        font-size: 1.5rem;
+    }
+
+    .sobre-nos-text-area p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .sobre-nos-tags {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .sobre-nos-item {
+        padding: 12px 6px;
+        border-radius: 10px;
+    }
+
+    .sobre-nos-item svg {
+        height: 28px;
+        margin-bottom: 8px;
+    }
+
+    .sobre-nos-item p {
+        font-size: 11px;
+    }
+
+    .corpo-clinico {
+        padding: 64px 16px;
+    }
+
+    .medicos-text-area h2 {
+          font-size: 30px;
+    }
+
+    .medicos-text-area p {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .medicos-button {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+
+    .exames-text {
+        padding: 30px 15px 0;
+    }
+
+    .exames-text h2 {
+        font-size: 22px;
+    }
+
+    .exames-text p {
+        font-size: 14px;
+    }
+
+    .exames-cards {
+        padding: 20px 15px;
+        gap: 12px;
+    }
+
+    .exames-item {
+        padding: 12px;
+    }
+
+    .exames-item h3 {
+        font-size: 14px;
+    }
+
+    .exames-item p {
+        font-size: 12px;
+    }
+
+    .exames-image {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .sintomas {
+        padding: 30px 15px;
+    }
+
+    .sintomas-title h2 {
+        font-size: 24px;
+    }
+
+    .sintomas-title p {
+        font-size: 14px;
+    }
+
+    .sintomas-grid {
+        padding: 15px;
+        gap: 15px;
+        grid-template-columns: 1fr;
+    }
+
+    .sintoma-image {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .map-section {
+        padding: 30px 10px;
+    }
+
+    .map-card {
+        padding: 18px;
+        width: 100%;
+    }
+
+    .map-card h3 {
+        font-size: 16px;
+    }
+
+    .map-info h3 {
+        font-size: 12px;
+    }
+
+    .map-info p {
+        font-size: 11px;
+    }
+
+    .map-iframe {
+        height: 250px;
+    }
+
+    .footer-top {
+        margin: 20px 15px 0;
+        width: calc(100% - 30px);
+    }
+
+    .footer-content {
+        padding: 30px 15px;
+        gap: 25px;
+    }
+
+    .footer-brand img {
+        max-width: 100px;
+    }
+
+    .footer-brand p {
+        font-size: 11px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .footer-social p,
+    .footer-contact p {
+        font-size: 13px;
+    }
+
+    .social-icons a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-icons svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .footer-button {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    nav {
+        margin: 10px;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .logo {
+        max-width: 60px;
+    }
+
+    .banner-principal {
+        margin: 0 10px;
+    }
+
+    .banner-text-area h1 {
+        font-size: 20px;
+    }
+
+    .banner-text-area h3 {
+        font-size: 14px;
+    }
+
+    .convenios h2 {
+        font-size: 20px;
+    }
+
+    .sobre-nos {
+        padding: 60px 10px;
+    }
+
+    .sobre-nos-text-area h2 {
+        font-size: 1.3rem;
+    }
+
+    .sobre-nos-tags {
+        grid-template-columns:1fr;
+    }
+
+    .medicos-text-area h2 {
+        font-size: 20px;
+    }
+
+    .sintomas-title h2 {
+        font-size: 20px;
+    }
+
+    .exames-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        padding: 25px 10px;
+    }
+}

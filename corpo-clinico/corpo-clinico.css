@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --color-bg: #ffffff;
+    --color-text: hsl(240, 6%, 10%);
+    --color-primary: #9CAD88;
+    --transition: 0.25s ease;
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: "Inter";
+  }
+  
+  img, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+  body, main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+ 
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  52px 64px;
+    gap: 60px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: 100px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-primary);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: width var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 200px;
+    /* margin-right: 216px ; */
+
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.horarios { 
+    display: flex;
+    flex-direction: column;
+    background-color: #DDDBDB;
+    opacity: 80%;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.manha { 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.tarde { 
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+}
+.telefone-fixo { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px
+}
+.telefones { 
+    display: flex;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.section-divider { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0 auto; 
+    height: 3px;
+    background-color: #b9c6a4;
+    width: 100%;
+    max-width: 1280px; 
+    
+}
+
+.medicos-text { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.medicos-text h1 { 
+    color: #9CAD88;
+}
+
+.medicos-text p { 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+.medicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 80px 64px;
+}
+.medico-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.medico-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #9CAD88;
+    margin-bottom: 16px;
+}
+.medico-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.medico-text { 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.medico-text h2 {
+    color: #8BA869;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.medico-text h3 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    opacity: 0.85;
+    margin-bottom: 16px;
+}
+.exams { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.exams a { 
+    color: #8BA869;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+.exams svg { 
+    color:#8BA869 ;
+}
+.exams a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 3px;
+    background-color: #8BA869;
+    transition: width 0.3s ease;
+}
+
+.exams a:hover::after {
+    width: 100%;
+}
+.botao { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.button-agendar { 
+    display: flex;
+    font-weight: bold;
+    padding: 12px 12px;
+    background-color: #8BA869;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:10px;
+}
+.button-agendar:hover { 
+    background-color: #637a4f;
+}
+
+.button-agendar a { 
+    text-decoration: none;
+    color: white;
+    
+}
+
+.map-section {
+  background-color: #bcc9a8;
+  padding: 80px 0;
+}
+
+.map-container {
+  position: relative;
+  max-width: 1200px;
+  height: 420px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-card {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.map-card h3 {
+  color: #7a8f5a;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.map-info {
+  margin-bottom: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-info h3 {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.map-info p {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.telefone-map { 
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap:10px
+}
+.manha-map { 
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.tarde-map { 
+  display: flex;
+  margin-top: -10px;
+}
+.loc-map { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+  
+.footer-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0 auto; 
+    height: 3px;
+    background-color: #b9c6a4;
+    width: 100%;
+    max-width: 1280px; 
+}
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px 80px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    align-items: start;
+    height: 100%;
+    max-height: 1080px;
+    flex: 1;
+}
+  
+  .footer-brand img {
+    max-width: 140px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-brand p {
+    font-size: 12px;
+    color: #7a8f5a;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .footer-links a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #7a8f5a;
+    transition: opacity 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    opacity: 0.7;
+  }
+  
+  .footer-social p,
+.footer-contact p {
+  font-size: 14px;
+  color: #7a8f5a;
+  line-height: 1.5;
+}
+  
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    color: white;
+  }
+  
+  .social-icons a {
+    color: white;
+    width: 36px;
+    height: 36px;
+    background-color: #2c2c2c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .social-icons svg {
+    width: 16px;
+    height: 16px;
+    text-decoration: none;
+  }
+  
+  .footer-contact p {
+    font-size: 14px;
+    color: #7a8f5a;
+    margin-bottom: 14px;
+  }
+  
+  .footer-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #9cad88;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .footer-button:hover {
+    background-color: #8a9b73;
+  }
+  
+  .footer-bottom {
+    background-color: #b9c6a4;
+    padding: 16px 0;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+.footer-bottom p {
+    font-size: 12px;
+    color: #fff;
+}
+@media (max-width:1280px) {
+  .map-container {
+    height: 500px;
+}
+
+.map-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: calc(100% - 40px);
+    margin: 20px;
+    border-radius: 12px 12px 0 0;
+}
+}
+@media (max-width: 768px) {
+
+    nav {
+      margin: 0;
+      padding: 14px 16px;
+      width: 100%;
+        height: 100%;
+      justify-content: space-between;
+    }
+  
+    .logo {
+      max-width: 80px;
+    }
+  
+    .mobile-menu-toggle {
+      display: flex;
+    }
+  
+    .nav-links {
+        margin-left: 0;
+        margin-right: 0;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background: white;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+    
+      .nav-links.active {
+        transform: translateX(0);
+      }
+  
+    .nav-links a {
+      font-size: 20px;
+    }
+  
+    .horarios {
+      display: none;
+    }
+  
+    .section-divider {
+      margin-top: 16px;
+      width: 90%;
+    }
+  
+    .medicos-text {
+      padding: 0 16px;
+    }
+  
+    .medicos-text h1 {
+      font-size: 22px;
+      text-align: center;
+    }
+  
+    .medicos-text p {
+      font-size: 15px;
+    }
+    .medicos-grid {
+      padding: 32px 16px;
+      grid-template-columns: 1fr;
+    }
+  
+    .medico-card {
+      padding: 20px 16px;
+    }
+  
+    .medico-image {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .button-agendar {
+      width: calc(100% - 32px);
+      margin: 0 auto;
+      justify-content: center;
+      padding: 14px;
+    }
+    
+    .map-section {
+      padding: 40px 15px;
+  }
+
+  .map-container {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+  }
+  .loc-map{ 
+      width: 65%;
+  }
+  .map-card {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      border-radius: 20px 20px 0 0;
+      order: -1;
+  }
+
+  .map-iframe {
+      height: 300px;
+      border-radius: 0 0 20px 20px;
+  }
+  
+    .footer-content {
+      padding: 32px 16px;
+      gap: 24px;
+    }
+  
+    .footer-button {
+      width: 100%;
+      text-align: center;
+    }
+  }
