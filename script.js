@@ -103,3 +103,12 @@ function handleSwipe() {
 const mobileToggle = document.querySelector('.mobile-menu-toggle'); 
 const mobileMenu = document.querySelector('.nav-links'); 
 mobileToggle.addEventListener('click', () => { mobileToggle.classList.toggle('active'); mobileMenu.classList.toggle('active'); });
+
+const navLinks = document.querySelectorAll('.nav-links a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    mobileToggle.classList.remove('active');
+  });
+});
